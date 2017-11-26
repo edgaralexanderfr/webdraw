@@ -16,6 +16,23 @@ var (
 	_SetCursorPos = _user32.NewProc("SetCursorPos")
 )
 
+func (this *Mouse) GetX () int32 {
+	return this.x
+}
+
+func (this *Mouse) GetY () int32 {
+	return this.y
+}
+
+func (this *Mouse) GetXY () (int32, int32) {
+	return this.x, this.y
+}
+
+func (this *Mouse) SetXY (x, y int32) {
+	this.x = x
+	this.y = y
+}
+
 func New () *Mouse {
 	return &Mouse{}
 }

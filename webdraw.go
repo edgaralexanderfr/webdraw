@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt"
+	"webdraw/server"
 )
 
 func main () {
-	fmt.Println("First commit... :)")
+	server.Start(":8080")
 }
